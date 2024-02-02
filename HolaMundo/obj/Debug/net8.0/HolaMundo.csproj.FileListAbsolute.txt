@@ -12,3 +12,4 @@ C:\Users\yxsua\OneDrive\Documentos\Autómatas\HolaMundo\obj\Debug\net8.0\refint\
 C:\Users\yxsua\OneDrive\Documentos\Autómatas\HolaMundo\obj\Debug\net8.0\HolaMundo.pdb
 C:\Users\yxsua\OneDrive\Documentos\Autómatas\HolaMundo\obj\Debug\net8.0\HolaMundo.genruntimeconfig.cache
 C:\Users\yxsua\OneDrive\Documentos\Autómatas\HolaMundo\obj\Debug\net8.0\ref\HolaMundo.dll
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\HolaMundo\obj\Debug\net8.0\HolaMundo.sourcelink.json
