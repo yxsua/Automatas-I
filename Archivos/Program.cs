@@ -11,6 +11,7 @@ namespace Archivos
         {
             Lecturas L = new Lecturas();
             L.Display();
+            L.Dispose();
         }
     }
 }

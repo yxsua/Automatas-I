@@ -19,6 +19,12 @@ namespace Archivos
             objeto.WriteLine("\nagarrados de la manooo, chinguen todos, a su madreeeEEeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
         }
 
+        public void Dispose() {
+            Console.WriteLine("\nDestructor");
+            fuente.Close(); 
+            objeto.Close();
+        }
+
         public void Display() {
             char c;
             while(!fuente.EndOfStream) {

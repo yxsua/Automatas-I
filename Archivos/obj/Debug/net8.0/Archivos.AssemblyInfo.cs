@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Archivos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e62759333ef5d59230f6bcea4cfece2c0e170fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35756327cf25fbc52ba0a09f76c94c1be3222d9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Archivos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Archivos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
