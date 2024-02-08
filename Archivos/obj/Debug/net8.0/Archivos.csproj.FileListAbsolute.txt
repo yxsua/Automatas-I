@@ -1,0 +1,15 @@
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.AssemblyInfoInputs.cache
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.AssemblyInfo.cs
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.sourcelink.json
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\bin\Debug\net8.0\Archivos.exe
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\bin\Debug\net8.0\Archivos.deps.json
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\bin\Debug\net8.0\Archivos.runtimeconfig.json
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\bin\Debug\net8.0\Archivos.dll
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\bin\Debug\net8.0\Archivos.pdb
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.dll
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\refint\Archivos.dll
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.pdb
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\Archivos.genruntimeconfig.cache
+C:\Users\yxsua\OneDrive\Documentos\Autómatas\Archivos\obj\Debug\net8.0\ref\Archivos.dll
