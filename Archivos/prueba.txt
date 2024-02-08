@@ -1,0 +1,10 @@
+*su nombre*
+
+agarrados de la manooo, chinguen todos, a su madreeeEEeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+#include <iostream>
+using namespace std;
+
+void main() {
+    cout << "putos todos" << endl;
+    return;
+}

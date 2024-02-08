@@ -9,10 +9,14 @@ namespace Archivos
     {
         private int a;
         private StreamReader fuente;
+        private StreamWriter objeto;
 
         public Lecturas() {
             a = 10;
             fuente = new StreamReader("prueba.cpp");
+            objeto = new StreamWriter("prueba.txt");
+            objeto.WriteLine("*su nombre*");
+            objeto.WriteLine("\nagarrados de la manooo, chinguen todos, a su madreeeEEeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
         }
 
         public void Display() {
@@ -20,7 +24,10 @@ namespace Archivos
             while(!fuente.EndOfStream) {
                 c = (char) fuente.Read();
                 Console.Write(c);
+                objeto.Write(c);
             }
+            fuente.Close();
+            objeto.Close();
         }
 
         public void mensaje() {
