@@ -12,11 +12,10 @@ namespace Archivos
         private StreamWriter objeto;
 
         public Lecturas() {
+            Console.WriteLine("Constructor inicializado...");
             a = 10;
             fuente = new StreamReader("prueba.cpp");
             objeto = new StreamWriter("prueba.txt");
-            objeto.WriteLine("*su nombre*");
-            objeto.WriteLine("\nagarrados de la manooo, chinguen todos, a su madreeeEEeeEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
         }
 
         public void Dispose() {
@@ -25,17 +24,53 @@ namespace Archivos
             objeto.Close();
         }
 
-        public void Display() {
+        public void CopyFile() {
+            char c;
+            while(!fuente.EndOfStream) {
+                c = (char) fuente.Read();
+                objeto.Write(c);
+            }
+        }
+
+        public void DisplayFile() {
             char c;
             while(!fuente.EndOfStream) {
                 c = (char) fuente.Read();
                 Console.Write(c);
-                objeto.Write(c);
             }
-            fuente.Close();
-            objeto.Close();
         }
 
+        public int ContarLetras() {
+            int letras = 0;
+            while(!fuente.EndOfStream) {
+                if (char.IsLetter((char) fuente.Read())) {
+                    letras++;
+                }
+            }
+            return letras;
+        }
+        
+        public void BorraLetras() {
+            while(!fuente.EndOfStream) {
+                char c = (char) fuente.Read();
+                if(char.IsLetter((char) c)) {
+                    objeto.Write("-");
+                } else {
+                    objeto.Write(c);
+                }
+            }
+        }
+
+        public void BorrarTodo() {
+            while(!fuente.EndOfStream) {
+                char c = (char) fuente.Read();
+                if(char.IsWhiteSpace((char) c)) {
+                    objeto.Write(c);
+                } else {
+                    objeto.Write("-");
+                }
+            }
+        }
         public void mensaje() {
             Console.WriteLine("Hola ITQ!" + a);
         }

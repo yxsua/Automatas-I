@@ -2,6 +2,6 @@
 using namespace std;
 
 void main() {
-    cout << "putos todos" << endl;
+    cout << "belles todes" << endl;
     return;
 }

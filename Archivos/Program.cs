@@ -10,8 +10,13 @@ namespace Archivos
         static void Main(string[] args) 
         {
             Lecturas L = new Lecturas();
-            L.Display();
+            // L.CopyFile();
+            // L.DisplayFile();
+            // Console.WriteLine("Cantidad de letras: " + L.ContarLetras());
+            // L.BorraLetras();
+            L.BorrarTodo();
             L.Dispose();
+            
         }
     }
 }
