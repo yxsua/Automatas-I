@@ -9,13 +9,14 @@ namespace Archivos
     {
         static void Main(string[] args) 
         {
-            Lecturas L = new Lecturas();
-            // L.CopyFile();
-            // L.DisplayFile();
-            // Console.WriteLine("Cantidad de letras: " + L.ContarLetras());
-            // L.BorraLetras();
-            L.BorrarTodo();
-            L.Dispose();
+            
+            using (Lecturas L = new Lecturas())
+            {
+                /* Console.WriteLine("Ingresa un caracter para reemplazar en el archivo: ");
+                ConsoleKeyInfo keyInfo = Console.ReadKey(); */
+                char letra = '$';
+                L.BorrarVocales(letra);
+            }         
             
         }
     }

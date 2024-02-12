@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace Archivos
 {
-    class Lecturas
+    class Lecturas : IDisposable
     {
         private int a;
         private StreamReader fuente;
@@ -61,6 +62,7 @@ namespace Archivos
             }
         }
 
+
         public void BorrarTodo() {
             while(!fuente.EndOfStream) {
                 char c = (char) fuente.Read();
@@ -71,8 +73,28 @@ namespace Archivos
                 }
             }
         }
+        
         public void mensaje() {
             Console.WriteLine("Hola ITQ!" + a);
         }
+
+    public bool esVocal(char caracter) {
+        String vocales = "AEIOUÁÉÍÓÚaeiouáéíóú";
+        if(vocales.Contains(caracter)) {
+            return true;
+        }
+        return false;
+    }
+        
+     public void BorrarVocales(char caracter) {
+        while(!fuente.EndOfStream) {
+          char c = (char) fuente.Read();
+            if(esVocal(c)) {
+                objeto.Write(caracter);
+            } else {
+                objeto.Write(c);                
+            }
+        }
+    }
     }
 }
