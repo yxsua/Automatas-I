@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// Proyecto, realizado por 
+// Angeles Arteaga Ulises Yasua
+// & Suarez Cruz Brayan Eduardo
 
 namespace Archivos
 {
