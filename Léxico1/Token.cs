@@ -7,12 +7,15 @@ namespace Lexico_1
 {
     public class Token
     {
+        // Todos los tipos de tokens que estamos considerando
         public enum Tipos
         {
             Identificador, Numero, FinSentencia, OpTermino, OpFactor,
             OpLogico, OpRelacional, OpTernario, Asignacion, IncTermino,
             IncFactor, Cadena, Inicio, Fin, Caracter // Comentario
         };
+        
+        // Los tokens tendrán contenido y clasificación
         private string contenido;
         private Tipos clasificacion;
         public Token()
