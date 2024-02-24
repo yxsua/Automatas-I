@@ -1,0 +1,38 @@
+Analizador Lexico
+Autor: Guillermo Fernandez
+Fecha: 23/02/2024 04:23:16 p. m.
+{ = Inicio
+# = Caracter
+include = Identificador
+"" = Cadena
+++ = IncTermino
++ = OpTermino
+-- = IncTermino
+- = OpTermino
+&& = OpLogico
+& = Caracter
+|| = OpLogico
+| = Caracter
+! = OpLogico
+!= = OpRelacional
+== = OpRelacional
+* = OpFactor
+*= = IncFactor
+/ = OpFactor
+/= = IncFactor
+%= = IncFactor
+? = OpTernario
+=< = OpRelacional
+< = OpRelacional
+< = OpRelacional
+> = OpRelacional
+> = OpRelacional
+>= = OpRelacional
+"Hola mundo" = Cadena
+1943225.10E80 = Numero
+; = FinSentencia
+1943225.10E+80 = Numero
+; = FinSentencia
+1943225.10E-80 = Numero
+; = FinSentencia
+} = Fin
