@@ -1,15 +1,10 @@
 Analizador Lexico
 Autor: Ulises Angeles
-Fecha: 23/02/2024 11:34:48 p. m.
+Fecha: 01/03/2024 03:14:16 p. m.
 { = Inicio
-# = Caracter
-include = Identificador
-"" = Cadena
 ++ = IncTermino
 + = OpTermino
 -- = IncTermino
-+= = IncTermino
--= = IncTermino
 - = OpTermino
 && = OpLogico
 & = Caracter
@@ -22,10 +17,9 @@ include = Identificador
 *= = IncFactor
 / = OpFactor
 /= = IncFactor
-% = OpFactor
 %= = IncFactor
-? = OpTernario
-=< = OpRelacional
+= = Asignacion
+< = OpRelacional
 < = OpRelacional
 < = OpRelacional
 > = OpRelacional
@@ -37,5 +31,9 @@ include = Identificador
 1943225.10E+80 = Numero
 ; = FinSentencia
 1943225.10E-80 = Numero
+; = FinSentencia
+$155.55 = Moneda
+; = FinSentencia
+$253.35 = Moneda
 ; = FinSentencia
 } = Fin

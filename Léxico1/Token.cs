@@ -12,7 +12,7 @@ namespace Lexico_1
         {
             Identificador, Numero, FinSentencia, OpTermino, OpFactor,
             OpLogico, OpRelacional, OpTernario, Asignacion, IncTermino,
-            IncFactor, Cadena, Inicio, Fin, Caracter // Comentario
+            IncFactor, Cadena, Inicio, Fin, Caracter, Moneda // Comentario
         };
         
         // Los tokens tendrán contenido y clasificación

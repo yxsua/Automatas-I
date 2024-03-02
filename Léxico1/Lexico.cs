@@ -4,23 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 
-/*
-    20%
-        Requerimiento 1: Escribir en el LOG, fecha y hora en los constructores
-        Requerimiento 2: Agregar el + o el - al exponente del numero
-    80%
-        OpTermino       -> + | -
-        OpFcator        -> * | / | %
-        OpLogico        -> && | || | !
-        OpRelacional    -> (>|< =?) | (! | =) =
-        Asignacion      -> =
-        IncTermino      -> ++ | -- | += | -=
-        IncFactor       -> *|/|% =
-        Cadena          -> "c*"
-        Inicio          -> {
-        Fin             -> }
-*/
-
 namespace Lexico_1
 {
     public class Lexico : Token, IDisposable
@@ -158,19 +141,28 @@ namespace Lexico_1
                     if (char.IsDigit(c = (char)archivo.Peek()) || c == '+' || c == '-')
                     {
                         // Si es un más o un menos, hay que añadirlo al buffer
-                        if (c == '+' || c == '-') 
-                        { 
-                            buffer += c; archivo.Read(); 
+                        if (c == '+' || c == '-')
+                        {
+                            buffer += c; archivo.Read();
                         }
 
                         // Concatenamos una cantidad n de dígitos
-                        while (char.IsDigit(c = (char)archivo.Peek()))
+                        if (char.IsDigit(c = (char)archivo.Peek()))
                         {
-                            buffer += c;
-                            archivo.Read();
+                            while (char.IsDigit(c = (char)archivo.Peek()))
+                            {
+                                buffer += c;
+                                archivo.Read();
+                            }
+                        }
+                        else
+                        {
+                            // Si no se coloca un número después del signo del exponencial,
+                            // se arroja error
+                            throw new Error("lexico: se espera un digito " + buffer, log);
                         }
                     }
-                    // Si el usuario no ingresa un dígito después de la E o del +/-
+                    // Si el usuario no ingresa un dígito después de la E
                     // arrojamos una excepción
                     else
                     {
@@ -235,7 +227,7 @@ namespace Lexico_1
                 // Si lo sigue un símbolo de mayor, menor u otro igual,
                 // entonces es un operador relacional
                 setClasificacion(Tipos.Asignacion);
-                if ((c = (char)archivo.Peek()) == '=' || c == '>' || c == '<')
+                if ((c = (char)archivo.Peek()) == '=')
                 {
                     buffer += c;
                     archivo.Read();
@@ -280,7 +272,8 @@ namespace Lexico_1
                     archivo.Read();
                 }
             }
-            else if (c == '\"') {
+            else if (c == '\"')
+            {
                 setClasificacion(Tipos.Cadena);
                 // Una cadena se inicia siempre con unas comillas
                 while (((c = (char)archivo.Peek()) != '\"') && (!finArchivo()))
@@ -289,7 +282,7 @@ namespace Lexico_1
                     buffer += c;
                     archivo.Read();
                 }
-                if(finArchivo()) 
+                if (finArchivo())
                 {
                     // Si la comilla nunca se cierra, arrojamos un error
                     throw new Error("lexico: se esperaba cierre de cadena " + buffer, log);
@@ -299,6 +292,41 @@ namespace Lexico_1
                 // hay que concatenarla fuera del ciclo
                 buffer += c;
                 archivo.Read();
+            }
+            else if (c == '$')
+            {
+                this.setClasificacion(Tipos.Caracter);
+                if ((char.IsDigit(c = (char)archivo.Peek())))
+                {
+                    this.setClasificacion(Tipos.Moneda);
+                    while (char.IsDigit(c = (char)archivo.Peek()))
+                    {
+                        buffer += c;
+                        archivo.Read();
+                    }
+                    // Si después del dígito hay un punto, concatenamos la parte fraccional
+                    if (c == '.')
+                    {
+                        // Parte fraccional
+                        archivo.Read();
+                        buffer += c;
+                        if (char.IsDigit(c = (char)archivo.Peek()))
+                        {
+                            // Se concatenan números hasta que ya no haya más dígitos
+                            while (char.IsDigit(c = (char)archivo.Peek()))
+                            {
+                                buffer += c;
+                                archivo.Read();
+                            }
+                        }
+                        else
+                        {
+                            // Si se coloca un punto pero ningún número después, 
+                            // arrojamos una excepción
+                            throw new Error("lexico: se espera un digito " + buffer, log);
+                        }
+                    }
+                }
             }
             else
             {
