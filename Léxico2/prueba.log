@@ -1,0 +1,41 @@
+Analizador Lexico
+Autor: Ulises Angeles
+Fecha: 19/03/2024 03:23:45 p. m.
+{ = Inicio
+++ = IncTermino
++ = OpTermino
+-- = IncTermino
+- = OpTermino
+&& = OpLogico
+& = Caracter
+|| = OpLogico
+| = Caracter
+! = OpLogico
+! = OpLogico
+!= = OpRelacional
+== = OpRelacional
+= = Asignacion
+; = FinSentencia
+for = Ciclo
+, = Caracter
+int = TipoDato
+, = Caracter
+if = Condicion
+, = Caracter
+radio26 = Identificador
+? = OpTernario
+< = OpRelacional
+< = OpRelacional
+< = OpRelacional
+> = OpRelacional
+> = OpRelacional
+>= = OpRelacional
+= = Asignacion
+; = FinSentencia
+3.5e-8 = Numero
+; = FinSentencia
+"" = Cadena
+"Hola mundo" = Cadena
+Error: Léxico: se esperaba cierre de cadena -> "
+    
+}
